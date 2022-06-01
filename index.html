@@ -1,91 +1,190 @@
 <!DOCTYPE html>
-<html lang="sp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Pagina de Fancesa S.A.</title>
+    <style>
+
+        #contenedor {margin: 30px auto; width:1px;}
+        .loader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 20px;
+            height: 50px;
+        }
+
+        .loader div {
+            width: 5px;
+            background: rgb(230, 18, 18);
+            animation: loader 1.2s linear infinite;
+        }
+
+        .loader div:nth-child(1) {
+            animation-delay: -1.75s;
+        }
+
+        .loader div:nth-child(2) {
+            animation-delay: -1.05s;
+        }
+
+
+
+        @keyframes loader {
+            0% {
+                height: 12px;
+            }
+
+            25% {
+                height: 50px;
+            }
+
+            50% {
+                height: 10px;
+            }
+
+            75% {
+                height: 25px;
+            }
+
+            100% {
+                height: 12px;
+            }
+        }
+
+        .headline {
+            color:red;
+            font-size: 3em;
+        }
+
+        #specials {
+            color:blue;
+            font-style: italic;
+        }
+
+     /*   p {
+            animation-duration: 3s;
+            animation-name: slidein;
+        }
+ 
+        @keyframes slidein {
+        from {
+            margin-left: 100%;
+            width: 300%;
+        }
+
+        75% {
+            font-size: 200%;
+            margin-left: 25%;
+            width: 150%;
+        
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+        }
+
+    */
+    /* 
+        p {
+            animation-duration: 3s;
+            animation-name: slidein;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes slidein {
+            from {
+            margin-left: 100%;
+            width: 300%;
+            }
+
+            to {
+            margin-left: 0%;
+            width: 100%;
+            }
+        }
+
+    */
+
+
+    p {
+        animation-duration: 5s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes slidein {
+        from {
+        margin-left: 100%;
+        width: 300%;
+        }
+
+        to {
+        margin-left: 0%;
+        width: 100%;
+        }
+    }
+
+    input {
+        accent-color: auto;
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    input.custom {
+        accent-color: rebeccapurple;
+    }
+
+
+
+
+
+
+
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul class="nav-right-section">
-                <li>
-                    <a href="">Correo</a>
-                </li>
-                <li>
-                    <a href="">Imágenes</a>
-                </li>
-                <li class="menu-icon">
-                    <a href=""></a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="https://lh3.googleusercontent.com/ogw/ADGmqu9eb4G2QhjCL3ODBtlzdzC34U5oKvTz1G1EsqW7qw=s32-c-mo" alt="" >
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="main-logo">
-            <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/old_to_new_logo_transform.gif" alt="">
-        </section>
-        <section class="main-input">
-            <div class="main-input-container">
-                <span class="search-icon">
-                </span>
-                <input type="text">
-                <a class="micro-icon" href=""></a>
-            </div>
-        </section>
-        <section class="main-buttons">
-            <div>
-                <button>Buscar con Google</button>
-            </div>
-            <div>
-                <button>Me siento con suerte</button>
-            </div>
-        </section>
-    </main>
-<footer>
-    <ul class="footer-left">
-        <li>
-            <a href="">Publicidad</a>
-        </li>
-        <li>
-            <a href="">Negocios</a>
-        </li>
-        <li>
-            <a href="">Acerca de</a>
-        </li>
-        <li>
-            <a href="">Cómo funciona la búsqueda</a>
-        </li>
-    </ul>
-    <ul class="footer-right">
-        <li>
-            <a href="">Privacidad</a>
-        </li>
-        <li>
-            <a href="">Condiciones</a>
-        </li>
-        <li>
-            <a href="">Preferencias</a>
-        </li>
-    </ul>
 
+<body align="center" background="./images/Fondo.png">
+    <h1>Animación CSS para implementar un Loader</h1>
+    <div id="contenedor">
+            <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
+<!--
+    codigo demostrativo de orden de prefernacia de . #
+-->
+    <h1 id="specials" class="headline">Today's Specials</h1>
 
+<!--
+    movimiento de p
+-->
 
-</footer>
+<p>La Oruga y Alicia se miraron durante un rato en silencio:
+    por fin, la oruga se quitó la pipa de agua de la boca y se dirigió a
+    ella con una voz lánguida y soñolienta.
+</p>
+    
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-
+<!--
+    caja check de color  #
+-->
+<input type="checkbox" checked />
+<input type="checkbox" class="custom" checked />
 
 
 
 
 
 </body>
+
 </html>
